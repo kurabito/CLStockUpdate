@@ -31,7 +31,7 @@ for i in data:
             if i["wp_user_id"] not in admins:
                 print(i["wp_user_id"])
                 admins.append(i["wp_user_id"])
-            record = {"create_date": i["create_date"], "person_id": person_id(i["wp_user_id"]), "product_id": i["product_id"], "new_stock_quantity": i["qty"]}
+            record = {"event_date": i["create_date"], "person_id": person_id(i["wp_user_id"]), "product_id": i["product_id"], "new_stock_quantity": i["qty"], "event_type": "67edc94c76be1"}
             json.dump(record, output_log, ensure_ascii=False, indent=4)
 
 output_log.close()
